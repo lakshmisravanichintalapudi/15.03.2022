@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>homework-15.03.2022</title>
+<script>
+document.write(" 1.odd numbers")
+document.write("<br>")
+var arr1=[]
+for(var i=0;i<=20;i++)
+{
+if(i%2!=0)
+{
+arr1.push(i);
+}
+else
+{
+continue;
+}
+}
+document.write(arr1);
+  document.write("<br>")
+  document.write("<br>")
+document.write(" 2.Bank application");
+        document.write("<br>");
+        
+        function banking(){
+            this.balance=0;
+            this.openAccount = function(openbalance){
+                this.balance=openbalance;
+                document.write("Account is opened and Your current balance is " + openbalance)
+            }
+            this.withdraw = function(withdrawamt){
+                if(withdrawamt>this.balance)
+                document.write("You dont have Enough Balance in you account")
+                else
+                {   
+                    this.balance = this.balance - withdrawamt; 
+                    document.write("Amount Withdraw Successfull Your Current Balance is :" + this.balance);   }
+            }
+            this.deposit = function(Depositamt){
+                this.balance=this.balance + Depositamt;
+                document.write("deposited the Amount " + Depositamt)
+                document.write("<br>")
+                document.write("Now your current balance is " + this.balance)
+            }
+        }
+
+        var acc = new banking();
+        acc.openAccount(5000);
+        document.write("<br>")
+        acc.withdraw(6000);
+        document.write("<br>");
+        acc.deposit(10000);
+        document.write("<br>");
+  document.write("<br>")
+document.write("3.printing the given pattern");
+document.write("<br/>");
+for(var i=1;i<=4;i++)
+  {  
+      for(var j=i;j<=4;j++)
+      {
+         document.write("*")
+      }
+      document.write("<br>")
+   }
+ for(var a=2;a<=4;a++)
+ {           
+     for(var b =1;b<=a;b++)
+     {
+        document.write("*")
+     }
+     document.write("<br>")
+ }
+document.write("<br>")
+        document.write("4.using function delete task from 5 tasks in one array")
+        document.write("<br>")
+        function deletingTask(){
+            this.taskarray = ["skipping","yoga","gym","gardening","reading"];
+            document.write(this.taskarray);
+            this.delete= function(i){
+                document.write("<br>")
+                this.taskarray.splice(i,1);
+                document.write("After Deletion");
+                document.write("<br>")
+                document.write(this.taskarray);
+            }
+        }
+        
+        var task = new deletingTask();
+        task.delete(1);
+</script>
+    
+</head>
+<body>
+
+</body>
+</html>
